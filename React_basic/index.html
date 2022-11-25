@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>React old way</title>
+  <style>
+    .header{
+      color: #808080;
+      border:2px solid red;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="root">Not Rendering</div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const rootElement = document.querySelector(".root");
+    const navbar = (
+      <div className ="header">
+        <h1>HOme</h1>
+        <h2>About as</h2>
+      </div>
+    );
+    const main = (
+      <div>
+        <h1>Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Debitis voluptate natus quas? Ipsam, esse non.
+        </h1>
+      </div>
+    );
+    const footer = <div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, veritatis.</p></div>
+
+    const App = <div>
+      {navbar}
+
+      {main}
+      {footer}
+    </div>;
+    ReactDOM.render(App, rootElement);
+
+  </script>
+</body>
+
+</html>
